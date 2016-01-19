@@ -32,7 +32,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 "Plugin Supertab
 
-Plugin 'ervandew/supertab'
+"Plugin 'ervandew/supertab'
 
 "Plugin Vim-sensible
 
@@ -56,11 +56,11 @@ Plugin 'majutsushi/tagbar'
 
 "Plugin HTML5
 
-Plugin 'othree/html5.vim'
+"Plugin 'othree/html5.vim'
 
 "Plguin Javascript
 
-Plugin 'pangloss/vim-javascript'
+"Plugin 'pangloss/vim-javascript'
 
 "Plugin indent
 
@@ -78,7 +78,7 @@ Plugin 'bling/vim-airline'
 
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'mxw/vim-jsx'
+"Plugin 'mxw/vim-jsx'
 
 Plugin 'easymotion/vim-easymotion'
 
@@ -86,13 +86,13 @@ Plugin 'Shougo/neomru.vim'
 
 Plugin 'Shougo/vimproc.vim'
 
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 
-Plugin 'mbbill/undotree'
+"Plugin 'mbbill/undotree'
 
 Plugin 'Shougo/neocomplete.vim'
 
-Plugin 'honza/vim-snippets'
+"Plugin 'honza/vim-snippets'
 
 Plugin 'Shougo/neosnippet'
 
@@ -121,7 +121,7 @@ filetype plugin indent on    " required
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F5> :NERDTreeToggle<CR>
-nmap <F4> :UndotreeToggle<CR>
+"nmap <F4> :UndotreeToggle<CR>
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 set tags=./tags,../tags
@@ -162,10 +162,10 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<TAB>" : "\<Plug>(neosnippet_expand_or_jump)"
+imap <expr><TAB>
+\ pumvisible() ? "\<C-n>" :
+\ neosnippet#expandable_or_jumpable() ?
+\    "\<TAB>" : "\<Plug>(neosnippet_expand_or_jump)"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
@@ -179,10 +179,13 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-"Exclusion for Numbers
+" Exclusion for Numbers
 let g:numbers_exclude = ['tagbar',  'unite', 'nerdtree', 'undotree', 'diffpanel']
 
-"Toggle Numbers
+" Syntastic
+let g:syntastic_cpp_check_header = 1
+
+" Toggle Numbers
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F2> :NumbersOnOff<CR>
 
