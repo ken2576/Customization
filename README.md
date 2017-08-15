@@ -21,6 +21,30 @@ $ vim
 
 ```
 
+## Hotkeys
+
+<kbd>F2</kbd> Toggle line number on/off
+
+<kbd>F3</kbd> Toggle line number display
+
+<kbd>F5</kbd> Toggle NERDTree
+
+<kbd>F8</kbd> Toggle Tagbar
+
+<kbd>\\</kbd> + <kbd>F</kbd> Text search in current buffer
+
+<kbd>\\</kbd> + <kbd>R</kbd> Fuzzy file search
+
+<kbd>space</kbd> + <kbd>S</kbd> Switch buffer
+
+<kbd>\\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
+
+(When there's a prompt)
+
+<kbd>ctrl</kbd> + <kbd>N</kbd> Select the next prompt
+
+<kbd>ctrl</kbd> + <kbd>K</kbd> Expand the code snippet
+
 ## Update Plugins
 
 In your Vim, type:
@@ -79,26 +103,4 @@ In your Vim, type:
 
  * tpope/vim-surround
 
-## Hotkeys
 
-<kbd>F2</kbd> Toggle line number on/off
-
-<kbd>F3</kbd> Toggle line number display
-
-<kbd>F5</kbd> Toggle NERDTree
-
-<kbd>F8</kbd> Toggle Tagbar
-
-<kbd>\\</kbd> + <kbd>F</kbd> Text search in current buffer
-
-<kbd>\\</kbd> + <kbd>R</kbd> Fuzzy file search
-
-<kbd>space</kbd> + <kbd>S</kbd> Switch buffer
-
-<kbd>\\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
-
-(When there's a prompt)
-
-<kbd>ctrl</kbd> + <kbd>N</kbd> Select the next prompt
-
-<kbd>ctrl</kbd> + <kbd>K</kbd> Expand the code snippet
