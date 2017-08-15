@@ -68,6 +68,8 @@ Plug 'vasconcelloslf/vim-interestingwords'
 
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'tpope/vim-surround'
+
 call plug#end()
 
 nmap <F8> :TagbarToggle<CR>

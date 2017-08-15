@@ -77,6 +77,8 @@ In your Vim, type:
 
  * vim-airline/vim-airline-themes
 
+ * tpope/vim-surround
+
 ## Hotkeys
 
 <kbd>F2</kbd> Toggle line number on/off
@@ -87,14 +89,16 @@ In your Vim, type:
 
 <kbd>F8</kbd> Toggle Tagbar
 
-<kbd>\</kbd> + <kbd>F</kbd> Text search in current buffer
+<kbd>/\</kbd> + <kbd>F</kbd> Text search in current buffer
 
-<kbd>\</kbd> + <kbd>R</kbd> Fuzzy file search
+<kbd>/\</kbd> + <kbd>R</kbd> Fuzzy file search
 
 <kbd>space</kbd> + <kbd>S</kbd> Switch buffer
 
-<kbd>\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
+<kbd>/\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
 
-(When there's a prompt) <kbd>ctrl</kbd> + <kbd>N</kbd> Select the next prompt
+(When there's a prompt)
+
+<kbd>ctrl</kbd> + <kbd>N</kbd> Select the next prompt
 
 <kbd>ctrl</kbd> + <kbd>K</kbd> Expand the code snippet
