@@ -89,13 +89,13 @@ In your Vim, type:
 
 <kbd>F8</kbd> Toggle Tagbar
 
-<kbd>/\</kbd> + <kbd>F</kbd> Text search in current buffer
+<kbd>\\</kbd> + <kbd>F</kbd> Text search in current buffer
 
-<kbd>/\</kbd> + <kbd>R</kbd> Fuzzy file search
+<kbd>\\</kbd> + <kbd>R</kbd> Fuzzy file search
 
 <kbd>space</kbd> + <kbd>S</kbd> Switch buffer
 
-<kbd>/\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
+<kbd>\\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
 
 (When there's a prompt)
 
