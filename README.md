@@ -8,6 +8,8 @@
 
 * [ag](https://github.com/ggreer/the_silver_searcher) (for faster searching)
 
+* Solarized theme for your terminal (Optional)
+
 ## Usage
 
 ```
@@ -29,50 +31,70 @@ In your Vim, type:
 
 ## Included Plugins
 
- * 'tpope/vim-sensible'
+ * tpope/vim-sensible
 
- * 'scrooloose/nerdtree'
+ * scrooloose/nerdtree
 
- * 'majutsushi/tagbar'
+ * majutsushi/tagbar
 
- * 'othree/html5.vim'
+ * othree/html5.vim
 
- * 'ciaranm/detectindent'
+ * ciaranm/detectindent
 
- * 'Shougo/unite.vim'
+ * Shougo/unite.vim
 
- * 'altercation/vim-colors-solarized'
+ * altercation/vim-colors-solarized
 
- * 'octol/vim-cpp-enhanced-highlight'
+ * octol/vim-cpp-enhanced-highlight
 
- * 'bling/vim-airline'
+ * bling/vim-airline
 
- * 'terryma/vim-multiple-cursors'
+ * terryma/vim-multiple-cursors
 
- * 'mxw/vim-jsx'
+ * mxw/vim-jsx
 
- * 'easymotion/vim-easymotion'
+ * easymotion/vim-easymotion
 
- * 'Shougo/neomru.vim'
+ * Shougo/neomru.vim
 
- * 'Shougo/vimproc.vim'
+ * Shougo/vimproc.vim
 
- * 'scrooloose/syntastic'
+ * scrooloose/syntastic
 
- * 'Shougo/neocomplete.vim'
+ * Shougo/neocomplete.vim
 
- * 'honza/vim-snippets'
+ * honza/vim-snippets
 
- * 'Shougo/neosnippet'
+ * Shougo/neosnippet
 
- * 'Shougo/neosnippet-snippets'
+ * Shougo/neosnippet-snippets
 
- * 'tpope/vim-fugitive'
+ * tpope/vim-fugitive
 
- * 'myusuf3/numbers.vim'
+ * myusuf3/numbers.vim
 
- * 'vasconcelloslf/vim-interestingwords'
+ * vasconcelloslf/vim-interestingwords
 
- * 'vim-airline/vim-airline-themes'
+ * vim-airline/vim-airline-themes
 
+## Hotkeys
 
+<kbd>F2</kbd> Toggle line number on/off
+
+<kbd>F3</kbd> Toggle line number display
+
+<kbd>F5</kbd> Toggle NERDTree
+
+<kbd>F8</kbd> Toggle Tagbar
+
+<kbd>\</kbd> + <kbd>F</kbd> Text search in current buffer
+
+<kbd>\</kbd> + <kbd>R</kbd> Fuzzy file search
+
+<kbd>space</kbd> + <kbd>S</kbd> Switch buffer
+
+<kbd>\</kbd> + <kbd>R</kbd> + <kbd>T</kbd> + <kbd>W</kbd> Clear all unnecessary spaces
+
+(When there's a prompt) <kbd>ctrl</kbd> + <kbd>N</kbd> Select the next prompt
+
+<kbd>ctrl</kbd> + <kbd>K</kbd> Expand the code snippet
