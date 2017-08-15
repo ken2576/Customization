@@ -1,131 +1,84 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" vim-plug (https://github.com/junegunn/vim-plug) settings
+" Automatically install vim-plug and run PlugInstall if vim-plug not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-" The sparkup vim script is in a subdirectory of this repo called vim.
-" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
+"Plug Vim-sensible
 
-"Plugin YouCompleteMe
+Plug 'tpope/vim-sensible'
 
-"Plugin 'Valloric/YouCompleteMe'
+"Plug NERDtree
 
-"Plugin Supertab
+Plug 'scrooloose/nerdtree'
 
-"Plugin 'ervandew/supertab'
+"Plug Tagbar
 
-"Plugin Vim-sensible
+Plug 'majutsushi/tagbar'
 
-Plugin 'tpope/vim-sensible'
+"Plug HTML5
 
-"Plugin NERDtree
+Plug 'othree/html5.vim'
 
-Plugin 'scrooloose/nerdtree'
+"Plug indent
 
-"Plugin vim-javascript-syntax
+Plug 'ciaranm/detectindent'
 
-"Plugin 'jelera/vim-javascript-syntax'
+"Plug unite
 
-"Plugin Tagbar
+Plug 'Shougo/unite.vim'
 
-Plugin 'majutsushi/tagbar'
+Plug 'altercation/vim-colors-solarized'
 
-"Plugin YCM generator
+Plug 'octol/vim-cpp-enhanced-highlight'
 
-"Plugin 'rdnetto/YCM-Generator'
+Plug 'bling/vim-airline'
 
-"Plugin HTML5
+Plug 'terryma/vim-multiple-cursors'
 
-"Plugin 'othree/html5.vim'
+Plug 'mxw/vim-jsx'
 
-"Plguin Javascript
+Plug 'easymotion/vim-easymotion'
 
-"Plugin 'pangloss/vim-javascript'
+Plug 'Shougo/neomru.vim'
 
-"Plugin indent
+Plug 'Shougo/vimproc.vim'
 
-Plugin 'ciaranm/detectindent'
+Plug 'scrooloose/syntastic'
 
-"Plugin unite
+Plug 'Shougo/neocomplete.vim'
 
-Plugin 'Shougo/unite.vim'
+Plug 'honza/vim-snippets'
 
-Plugin 'altercation/vim-colors-solarized'
+Plug 'Shougo/neosnippet'
 
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'Shougo/neosnippet-snippets'
 
-Plugin 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
 
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'myusuf3/numbers.vim'
 
-"Plugin 'mxw/vim-jsx'
+Plug 'vasconcelloslf/vim-interestingwords'
 
-Plugin 'easymotion/vim-easymotion'
+Plug 'vim-airline/vim-airline-themes'
 
-Plugin 'Shougo/neomru.vim'
-
-Plugin 'Shougo/vimproc.vim'
-
-"Plugin 'scrooloose/syntastic'
-
-"Plugin 'mbbill/undotree'
-
-Plugin 'Shougo/neocomplete.vim'
-
-"Plugin 'honza/vim-snippets'
-
-Plugin 'Shougo/neosnippet'
-
-Plugin 'Shougo/neosnippet-snippets'
-
-Plugin 'tpope/vim-fugitive'
-
-Plugin 'myusuf3/numbers.vim'
-
-Plugin 'vasconcelloslf/vim-interestingwords'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+call plug#end()
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F5> :NERDTreeToggle<CR>
-"nmap <F4> :UndotreeToggle<CR>
+
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 set tags=./tags,../tags
 set number
+
+"Custom highlight
 hi Visual ctermfg=brown ctermbg=gray gui=bold guifg=brown guibg=gray
 
 let g:cpp_class_scope_highlight = 1
@@ -162,12 +115,12 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
-imap <expr><TAB>
-\ pumvisible() ? "\<C-n>" :
-\ neosnippet#expandable_or_jumpable() ?
-\    "\<TAB>" : "\<Plug>(neosnippet_expand_or_jump)"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<TAB>" : "\<Plug>(neosnippet_expand_or_jump)"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
@@ -180,7 +133,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Exclusion for Numbers
-let g:numbers_exclude = ['tagbar',  'unite', 'nerdtree', 'undotree', 'diffpanel']
+let g:numbers_exclude = ['tagbar',  'unite', 'nerdtree', 'diffpanel']
 
 " Syntastic
 let g:syntastic_cpp_check_header = 1
