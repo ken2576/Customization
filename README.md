@@ -31,9 +31,9 @@ $ vim
 
 <kbd>F8</kbd> Toggle Tagbar
 
-<kbd>\\</kbd> + <kbd>F</kbd> Text search in current buffer
+<kbd>\\</kbd> + <kbd>F</kbd> Fuzzy file search
 
-<kbd>\\</kbd> + <kbd>R</kbd> Fuzzy file search
+<kbd>\\</kbd> + <kbd>R</kbd> Text search in current buffer
 
 <kbd>space</kbd> + <kbd>S</kbd> Switch buffer
 
