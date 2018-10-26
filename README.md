@@ -10,6 +10,10 @@
 
 * Solarized theme for your terminal (Optional)
 
+  [Solarized8](https://github.com/lifepillar/vim-solarized8)
+  
+  [gnome-terminal-colors-solarized](https://github.com/Anthony25/gnome-terminal-colors-solarized)
+
 ## Usage
 
 ```
